@@ -1,0 +1,7 @@
+*Dependencies
+	- express.js : framework based on Node.js
+	- mongoose : It is object document mapper to work with MongoDB
+	- bcryptjs 
+	- cors : make requests from our front-end even if it's not a different port
+	- jsonwebtoket : generate GWT token
+	- passport-jwt : create a login strategy that uses web tokens
