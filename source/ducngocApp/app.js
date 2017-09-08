@@ -30,5 +30,5 @@ app.listen(port,()=>{
 //#region Api
 app.get('/',(req,res)=>{
     res.send('Invalid Endpoint');
-})
+});
 //#endregion
