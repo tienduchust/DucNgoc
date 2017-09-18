@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introducing the doMath function</title>
+    <script>
+        function doMath(number1, number2, callback) {
+            if (typeof callback === "function") {
+                var result = callback(number1, number2);
+                document.getElementById("theResult").innerHTML +=
+                    (callback.toString() + "<br><br>The result is:" + result + " <br> <br> ");
+            }
+        }
+
+        function multiplyThem(number1, number2) {
+            var calculation = number1 * number2;
+            return calculation;
+        }
+
+        function divideThem(number1, number2) {
+            var calculation = number1 / number2;
+            return calculation;
+        }
+
+        function modThem(number1, number2) {
+            var calculation = number1 % number2;
+            return calculation;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            doMath(5, 2, multiplyThem);
+            doMath(10, 3, divideThem);
+            doMath(81, 9, modThem);
+        }, false);
+    </script>
+
+    <body>
+        <h1>Do the math</h1>
+        <div id="theResult"></div>
+    </body>
+
+</html>

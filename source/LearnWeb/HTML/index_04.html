@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Looking for javascript</title>
+    <script>
+        window.addEventListener("load", registerEvents, false);
+
+        function registerEvents(e) {
+            document.getElementById("ask").addEventListener("click", findAnswer, false);
+        }
+
+        function findAnswer() {
+            var question = document.getElementById("userQuestion").value;
+            var re = new RegExp("JavaScriptducngoc");
+            if (re.test(question) === true) {
+                document.getElementById("answer").innerHTML = "JavaScript Question? Check out Coding with javaScript for Dummies by Minnick and Eva Holland";
+                console.log("JavaScriptducngoc");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="userInput">
+        <label>Enter your question:
+            <textarea  id="userQuestion"></textarea>
+            <button id="ask" type="button">Get an answer</button>
+        </label>
+    </form>
+    <div id="answer"></div>
+</body>
+
+</html>

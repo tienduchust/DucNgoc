@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>JQuery CSS And Event</title>
+    <script src="/../JS/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#sizer').change(function() {
+                $('#theText').css('font-size', $('#sizer').val());
+            });
+        });
+    </script>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#colorizer').on('click', function() {
+                $('#things tr:even').css('background', 'yellow');
+
+            });
+        });
+        $(document).on('click', 'tr', function() {
+            alert("thanks for click");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="theText">Hello!</div>
+    <form id="controller">
+        <input type="range" id="sizer" min="10" max="100">
+    </form>
+
+    <table id="things">
+        <tr>
+            <td>item1</td>
+            <td>item2</td>
+            <td>item3</td>
+        </tr>
+        <tr>
+            <td>apples</td>
+            <td>oranger</td>
+            <td>lemmons</td>
+        </tr>
+        <tr>
+            <td>merlot</td>
+            <td>malbec</td>
+            <td>cabernet</td>
+        </tr>
+    </table>
+    <form id="tableControl">
+        <button type="button" id="colorizer">Colorizer</button>
+    </form>
+</body>
+
+</html>

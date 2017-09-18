@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Slideshow</title>
+    <style>
+        #carousel {
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            top: 100px;
+            left: 100px;
+            display: hidden;
+        }
+    </style>
+    <script>
+        var slides = [
+            "<div id='slide1'>my first slide<br><img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnlaxQt5DKfFkAeedqRmkrp4VZntAl7_teSvvly0V4mtKzCG7s'></div>",
+            "<div id='slide2'>my second slide<br><img src = 'https://secure-images.nike.com/is/image/DotCom/831069_100_98_PREM?$SNKRS_COVER_WM$&align=0,1'></div> ",
+            "<div id='slide3'>my third slide<br><img src = 'http://vn-live-02.slatic.net/p/6/giay-the-thao-nam-mens-nike-free-rn-running-shoe-831508-101-xam-1494217850-6037665-1dbd625b444004463cebb0bf847c7fc0-catalog_233.jpg'></div>"
+        ];
+
+
+        var currentSlide = 0;
+        var numberOfSlides = slides.length - 1;
+        window.addEventListener("load", loader, false);
+
+        function loader() {
+            changeImage();
+        }
+
+        function changeImage() {
+            console.log("changeImage function");
+            if (currentSlide > numberOfSlides) {
+                currentSlide = 0;
+            }
+
+            document.getElementById("caraousel").
+            innerHTML = slides[currentSlide];
+            console.log('displaying slide' + currentSlide +
+                "of " + numberOfSlides);
+            currentSlide++;
+            setTimeout(changeImage, 1000);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="caraousel"></div>
+</body>
+
+</html>

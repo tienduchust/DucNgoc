@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery CSS</title>
+    <script src="/../JS/jquery-1.11.2.min.js"></script>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#animator').on('click', function() {
+                $('#items').fadeToggle(200);
+                $('fruits').slideUp(500);
+                $('wines').toggle(400, 'swing', function() {
+                    $('#wine').toggle(400, 'swing');
+                });
+                $('h1').hide();
+                $('h1').slideDown(1000).animate({
+                    'color': 'blue',
+                    'font-size': '100px'
+                }, 1000);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myimg').attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe2wSDsYX5Z7NVUGsV-94j3JeIVWqnPmfQP3LLiKWw5A52uzLD");
+            $('tr').eq(1).addClass('selector');
+            $('p#pid').click(function() {
+                $(this).toggleClass('blue');
+                $('p').find("span").text("abc");
+            });
+            $('tr').filter('.bottom').addClass('blue');
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('tr').click(function() {
+                if ($(this).is(':first-child')) {
+                    $('p').text("this is td1");
+                } else if ($(this).is('.middle0,.middle1')) {
+                    $('p').text("this is middle class");
+                } else if ($(this).is(":contains('merlot')")) {
+                    $('p').text("it's merlot");
+                }
+
+            });
+        });
+    </script>
+    <style>
+        .selector {
+            color: red;
+        }
+        
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Here are a bunch of things</h1>
+    <table id="things">
+        <tr id="items" class="top">
+            <td>item1</td>
+            <td>item2</td>
+            <td>item3</td>
+        </tr>
+        <tr id="fruits" class="middle">
+            <td>apples</td>
+            <td>oranger</td>
+            <td>lemmons</td>
+        </tr>
+        <tr id="wines" class="bottom">
+            <td>merlot</td>
+            <td>malbec</td>
+            <td>cabernet sauvignon</td>
+        </tr>
+    </table>
+    <form id="tableController">
+        <button type="button" id="animator">Animate Stuff</button>
+    </form>
+    <div>
+        <img src="https://taocover.com/uploads/worigin/2017/03/17/viet-chu-len-cover58cbec9b62a75_b2eb40b16f74db7b3e196e19baef6d38.jpg" alt="sample image" id="myimg">
+    </div>
+    <p id="pid">This first paragraph <span> ABC</span></p>
+    <p class="pclass">FILLER</p>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Jquery</title>
+    <style>
+        #helloDiv {
+            background: #333;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 3px;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+    <script src="/../JS/jquery-1.11.2.min.js"></script>
+    <!-- Jquery CSS -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#sizer').change(function() {
+                $('#theText').css('font-size', $('#sizer').val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="clickme"> Click Me! </button>
+    <div id="helloDiv"> Hello, Jquery </div>
+    <script>
+        $("#clickme").click(function() {
+            if ($("#helloDiv").is(":hidden")) {
+                $("#helloDiv").slideDown("slow");
+            } else {
+                $("div").hide();
+            }
+        });
+    </script>
+    <!-- using chaining -->
+    <div id="pageHeader" />
+    <script type="text/javascript">
+        $("#pageHeader")
+            .text("Hello, world!")
+            .css("color", "red")
+            .css("font‐size", "60px");
+    </script>
+    <div id="theText">Hello!</div>
+    <form id="controller">
+        <input type="range" id="sizer" min="10" max="100">
+    </form>
+</body>
+
+</html>

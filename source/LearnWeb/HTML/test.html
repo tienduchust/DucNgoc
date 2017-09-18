@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Học Web Chuẩn</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(window).bind("load resize", function() {
+            var win = $(window);
+            var box = $(".box");
+            var top = (win.height() - box.height()) / 2;
+            var left = (win.width() - box.width()) / 2;
+            box.css({
+                "position": "absolute",
+                "top": top,
+                "left": left
+            });
+        });
+    </script>
+    <style>
+        * {
+            /* reset lại margin và padding cho các tag */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            border: 1px solid #c00;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">text</div>
+</body>
+
+</html>

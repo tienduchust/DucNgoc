@@ -1,0 +1,345 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: #F1F6F8;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #524C56;
+    font-size: 160%;
+    line-height: 155%;
+    padding: 3%;
+    text-indent: 2%;
+    text-align: justify;
+}
+
+h3 {
+    font-size: 175%;
+    line-height: 155%;
+    font-weight: 500;
+    color: #524C56;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+a {
+    color: #524C56;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #C3D7DF;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: -4px;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#banner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 3 0;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    margin: 20px;
+    float: left;
+    width: 200px;
+    height: 60px;
+    background: url(https://scontent.fhan2-1.fna.fbcdn.net/v/t34.0-12/21443015_1073712499437727_346836779_n.png?oh=d4c80e749908ec03f084450fc1bfcd07&oe=59C14C54) no-repeat center;
+}
+
+
+/* start Nav */
+
+nav {
+    float: right;
+    padding: 25px 20px 0px 0px;
+}
+
+#menu-icon {
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    background: url(http://graphiccave.com/wp-content/uploads/2015/04/Menu-Icon-PNG-Graphic-Cave.png) center;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #6991AC;
+}
+
+.current {
+    color: #3F5767;
+}
+
+a:hover {
+    color: #A5BDCD;
+}
+
+
+/* and Nav */
+
+.carousel-inner {
+    max-width: 1200px;
+}
+
+.item img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.one-third {
+    width: 33.333333%;
+    float: left;
+    text-align: justify;
+    text-align: center;
+}
+
+.icon-wrap {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 125%;
+    text-align: center;
+    background-color: #6991AC;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+.icon-wrap i {
+    text-align: center;
+    color: #F0F0F0;
+    font-size: 450%;
+    padding: 20%;
+}
+
+.left-col {
+    float: left;
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+    padding: 1%;
+}
+
+.sidebar {
+    float: right;
+    margin: 0 auto;
+    width: 32%;
+    height: auto;
+    padding: 1%;
+}
+
+.one-third-padding {
+    width: 29%;
+    float: left;
+    margin: 2% 2%;
+    text-align: justify;
+}
+
+.clearfix-padding {
+    clear: both;
+    padding: 2%;
+}
+
+
+/* start footer */
+
+footer {
+    background: #6991Ac;
+    width: 0 auto;
+    overflow: auto;
+}
+
+.icon-text {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-text-icon {
+    float: left;
+    width: 20%;
+    padding: 4%;
+}
+
+.icon-text-text {
+    width: 64%;
+    float: left;
+    padding: 4% 4% 2% 0%;
+}
+
+.footer-nav {
+    text-align: right;
+}
+
+.footer-nav a {
+    font-size: 160%;
+    color: #C3D7DF;
+    font-weight: 300;
+}
+
+.footer-nav a:hover {
+    color: #F5F5F5;
+}
+
+.social {
+    list-style-type: none;
+    text-align: center;
+}
+
+.social li {
+    display: inline;
+}
+
+.social i {
+    font-size: 420%;
+    margin: 1%;
+    padding: 5% 5% 5% 4%;
+    color: rgb(195, 215, 223);
+}
+
+.social i:hover {
+    color: #F5F5F5;
+}
+
+footer .second {
+    border-top: 1px solid #AADCD2;
+    background-color: #544B59;
+    max-height: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+footer .second p {
+    padding: 5% 0% 9% 0%;
+    text-align: center;
+    color: #F5F5F5;
+    font-size: 160%;
+    line-height: 155%;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 130%;
+    }
+    h3 {
+        font-size: 150%;
+    }
+    header {
+        height: 80px;
+        position: relative;
+    }
+    #logo {
+        margin: 15px 0 20px -25px;
+        background: url(https://scontent.fhan2-1.fna.fbcdn.net/v/t34.0-12/21443015_1073712499437727_346836779_n.png?oh=d4c80e749908ec03f084450fc1bfcd07&oe=59C14C54) no-repeat center;
+    }
+    #menu-icon {
+        display: inline-block;
+    }
+    nav:hover ul {
+        display: block;
+    }
+    nav ul,
+    nav:active ul {
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        padding: 20px;
+        background: #F5F5F5;
+        border: 1px solid #A5BDCD;
+        right: 20px;
+        width: 50%;
+        border-radius: 3px 0 3px 3px;
+        opacity: .95;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+    }
+    .one-third {
+        float: left;
+        width: 100%;
+    }
+    .icon-wrap {
+        height: 80px;
+        width: 80px;
+        margin-top: 3%;
+    }
+    .icon-wrap i {
+        font-size: 250%;
+        padding-top: 27%;
+    }
+    .left-col {
+        width: 100%;
+        padding: 0;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .one-third-padding {
+        width: 98%;
+        margin: 0;
+        padding: 1%;
+    }
+    .icon-text-icon {
+        width: 100%;
+        padding: 0 0 2% 0;
+    }
+    .icon-text-text {
+        width: 100%;
+        padding: 2% 0 0 0;
+        font-size: 80%;
+    }
+    .footer-nav {
+        text-align: center;
+        padding-top: 5%;
+    }
+    .footer-nav li {
+        padding: 1%;
+    }
+    .footer-nav a {
+        font-size: 145%;
+    }
+    .social i {
+        font-size: 180%;
+    }
+}

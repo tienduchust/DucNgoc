@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loading External Data</title>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init(e) {
+            document.getElementById('myButton').addEventListener('click', documentloader, false);
+        }
+
+        function regListener() {
+            console.log(this.responseText);
+            document.getElementById("content").innerHTML = this.responseText;
+        }
+
+        function documentloader() {
+            var oReq = new XMLHttpRequest();
+            oReq.onload = regListener;
+            oReq.open("get", "loadme.txt", true);
+            oReq.send();
+        }
+    </script>
+</head>
+
+<body>
+    <form id="myForm">
+        <button id="myButton" type="button">Click to Load</button>
+
+    </form>
+    <div id="content"></div>
+</body>
+
+</html>
